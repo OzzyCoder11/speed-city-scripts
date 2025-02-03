@@ -41,7 +41,8 @@ local assetMap = {
     	"http://www.roblox.com/asset/?id=4535445878",
 	"http://www.roblox.com/asset/?id=4536835191",
     	"http://www.roblox.com/asset/?id=6271975958",
-    	"http://www.roblox.com/asset/?id=4050967476"
+    	"http://www.roblox.com/asset/?id=4050967476",
+	"https://www.roblox.com/Thumbs/Asset.ashx?format=jpg&width=250&height=250&assetid=4765323"
 }
 
 local function createImageLabel(slot)
