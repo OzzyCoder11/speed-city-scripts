@@ -35,6 +35,7 @@ local assetMap = {
 	"http://www.roblox.com/asset/?id=4536833863",
 	"rbxassetid://2257788314",
 	"rbxassetid://3145925412",
+	"http://www.roblox.com/asset/?id=5837940697", -- GIFT
 	"http://www.roblox.com/asset/?id=5188994098",
     	"http://www.roblox.com/asset/?id=4535315270",
     	"http://www.roblox.com/asset/?id=14345993444",
