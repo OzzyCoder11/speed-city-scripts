@@ -34,6 +34,7 @@ local assetMap = {
 	"https://www.roblox.com/Thumbs/Asset.ashx?format=jpg&width=250&height=250&assetid=66319941",
 	"http://www.roblox.com/asset/?id=4536833863",
 	"rbxassetid://2257788314",
+	"rbxassetid://3145925412",
 	"http://www.roblox.com/asset/?id=5188994098",
     	"http://www.roblox.com/asset/?id=4535315270",
     	"http://www.roblox.com/asset/?id=14345993444",
