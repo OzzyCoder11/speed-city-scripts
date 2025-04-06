@@ -342,3 +342,36 @@ local CrateButton = CrateTab:CreateButton({
 		game:GetService("ReplicatedStorage").BuyCrate:FireServer("Best Crate")
    end,
 })
+
+local Divider1 = CrateTab:CreateDivider()
+
+local function openShoppingCart()
+	wait(3)
+
+	local udim2 = UDim2.new(0.35, 0, -0.5, 0)
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Position = udim2
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Visible = false
+
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Unbox:Play()
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Image = "http://www.roblox.com/asset/?id=14345988498"
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Visible = true
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate:TweenPosition(UDim2.new(0.35, 0, 0.25, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Bounce, 1)
+	wait(1.5)
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Holder.ImageTransparency = 0
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Image = "rbxassetid://3096646139"
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Info.Visible = true
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Info.Text = "Shopping Cart"
+	wait(2)
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Holder.ImageTransparency = 1
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Visible = false
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Position = udim2
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Crate.Image = "rbxassetid://2702267737"
+	game:GetService("Players").LocalPlayer.PlayerGui.ScreenCrate.Info.Visible = false
+end
+
+local CrateButton = CrateTab:CreateButton({
+   Name = "Fake Shopping Cart",
+   Callback = function()
+	   openShoppingCart()
+   end,
+})
