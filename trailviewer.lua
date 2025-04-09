@@ -7,7 +7,7 @@ gui.Name = "trailviewer"
 gui.ResetOnSpawn = false
 
 local frame = Instance.new("Frame", gui)
-frame.Position = UDim2.new(0, 700, 1, -200) -- bottom-left corner
+frame.Position = UDim2.new(0, 800, 1, -790)
 frame.Size = UDim2.new(0, 420, 0, 200)
 frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 frame.BorderSizePixel = 0
