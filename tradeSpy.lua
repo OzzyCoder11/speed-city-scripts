@@ -12,6 +12,7 @@ mainFrame.Size = UDim2.new(0, 400, 0, 300)
 mainFrame.Position = UDim2.new(1, -400, 1, -300)
 mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 mainFrame.BorderSizePixel = 0
+mainFrame.Draggable = true
 mainFrame.Active = true
 
 local uiCorner = Instance.new("UICorner", mainFrame)
