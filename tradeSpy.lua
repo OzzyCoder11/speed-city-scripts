@@ -39,6 +39,10 @@ scrollFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
 local layout = Instance.new("UIListLayout", scrollFrame)
 layout.Padding = UDim.new(0, 6)
 
+for i, v in game.Players.LocalPlayer.trails:GetChildren() do
+	game:GetService("ReplicatedStorage").DestroyTrail:FireServer(v.Name)
+end
+
 local function createSessionLabel(session)
 	local label = Instance.new("TextLabel")
 	label.Size = UDim2.new(1, -10, 0, 35)
