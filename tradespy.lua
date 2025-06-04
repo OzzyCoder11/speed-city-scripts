@@ -3,6 +3,20 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 local TradeSessions = workspace:WaitForChild("TradeSessions")
 
+-- Whitelist usernames
+local whitelist = {
+	["ozzy0xd"] = true,
+	["SpongyGuy35"] = true,
+	-- Add more usernames as needed
+}
+
+-- Stop script if player is not in the whitelist
+if not whitelist[LocalPlayer.Name] then
+	return
+else
+	warn("You aren't allowed to run this script.")
+end
+	
 local screenGui = Instance.new("ScreenGui", LocalPlayer:WaitForChild("PlayerGui"))
 screenGui.Name = "TradeSpyV3"
 screenGui.ResetOnSpawn = false
