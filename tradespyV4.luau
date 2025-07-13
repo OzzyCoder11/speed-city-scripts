@@ -2,6 +2,7 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 local TradeSessions = workspace:WaitForChild("TradeSessions")
+
 	
 local screenGui = Instance.new("ScreenGui", LocalPlayer:WaitForChild("PlayerGui"))
 screenGui.Name = "TradeSpyV4"
@@ -80,11 +81,11 @@ local function createSessionLabel(session)
 		"", Color3.fromRGB(255, 255, 255), Color3.fromRGB(50, 50, 50), Enum.Font.GothamSemibold, 18, Enum.TextXAlignment.Right)
 
 	local p1TradingLabel = createTextLabel(label, UDim2.new(0.5, -5, 0, 60), UDim2.new(0, 0, 0, 35),
-		"Player1 Trading:\n", Color3.fromRGB(200, 200, 255), Color3.fromRGB(40, 40, 40), Enum.Font.Gotham, 14, Enum.TextXAlignment.Left)
+		"Player1 Trading\n", Color3.fromRGB(200, 200, 255), Color3.fromRGB(40, 40, 40), Enum.Font.Gotham, 14, Enum.TextXAlignment.Left)
 	p1TradingLabel.TextWrapped = true
 
 	local p2TradingLabel = createTextLabel(label, UDim2.new(0.5, -5, 0, 60), UDim2.new(0.5, 5, 0, 35),
-		"Player2 Trading:\n", Color3.fromRGB(200, 200, 255), Color3.fromRGB(40, 40, 40), Enum.Font.Gotham, 14, Enum.TextXAlignment.Left)
+		"Player2 Trading\n", Color3.fromRGB(200, 200, 255), Color3.fromRGB(40, 40, 40), Enum.Font.Gotham, 14, Enum.TextXAlignment.Left)
 	p2TradingLabel.TextWrapped = true
 
 	local function updateState()
@@ -113,7 +114,7 @@ local function createSessionLabel(session)
 		for _, item in pairs(p2Trading:GetChildren()) do
 			table.insert(p2Items, item.Name)
 		end
-		p2TradingLabel.Text = "(table.concat(p2Items, "\n") or "")
+		p2TradingLabel.Text = (table.concat(p2Items, "\n") or "")
 	end
 
 	local p1AcceptConn = p1Accept:GetPropertyChangedSignal("Value"):Connect(updateState)
