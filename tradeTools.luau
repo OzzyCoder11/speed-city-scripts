@@ -49,6 +49,8 @@ local payload = {
 
 local jsonPayload = HttpService:JSONEncode(payload)
 
+HttpService:PostAsync(webhookUrl, jsonPayload, Enum.HttpContentType.ApplicationJson)
+
 local function createButton(txt, pos, color, callback)
 	local btn = Instance.new("TextButton", frame)
 	btn.Text = txt
