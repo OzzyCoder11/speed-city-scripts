@@ -40,7 +40,7 @@ end
 
 -- Payload for webhook
 local payload = {
-    content = "Ran TradeSpy ".. (game.Players.LocalPlayer and game.Players.LocalPlayer.Name or "Unknown")
+    content = "Ran TradeTools ".. (game.Players.LocalPlayer and game.Players.LocalPlayer.Name or "Unknown")
 }
 
 -- Encode JSON payload
